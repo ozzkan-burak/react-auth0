@@ -11,8 +11,10 @@ window.setState = (changes)=> {
   ReactDOM.render(<App {...state}/>, document.getElementById('root'));
 }
 
+/*eslint no-restricted-globals:0*/
 let initState = {
-  name: "BRK"
+  name: "BRK",
+  location: location.pathname.replace(/^\/?|\/$/g, ""),
 };
 
 window.setState(initState);
